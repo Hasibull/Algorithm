@@ -14,8 +14,7 @@ int minCoins()
 
     for(int i=1; i<=V; i++)
         for(int j=0; j<n; j++)
-            if(coins[j] <=
-               i)
+            if(coins[j] <= i)
                 dp[i] = min(dp[i], dp[i - coins[j]]+1);
 
     return dp[V];
